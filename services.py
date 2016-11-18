@@ -85,7 +85,7 @@ def make_pascal_voc(data_dir, devkit_path, year):
         shutil.rmtree(devkit_path)
     voc_path = os.path.join(devkit_path, 'VOC{}'.format(year))
     annotations = os.path.join(voc_path, 'Annotations')
-    image_sets = os.path.join(voc_path, 'ImageSets')
+    image_sets = os.path.join(voc_path, 'ImageSets', 'Main')
     jpeg_images = os.path.join(voc_path, 'JPEGImages')
     for path in (annotations, image_sets, jpeg_images):
         os.makedirs(path)
